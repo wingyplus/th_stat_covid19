@@ -1,7 +1,7 @@
 defmodule ThStat.Covid19.Supervisor do
   use Supervisor
 
-  def start_link(_args), do: Supervisor.start_link(__MODULE__, strategy: :one_for_one, name: __MODULE__)
+  def start_link(args), do: Supervisor.start_link(__MODULE__, args, name: __MODULE__)
 
   @impl true
   def init(_args) do
