@@ -17,3 +17,26 @@ def deps do
 end
 ```
 
+## Usage
+
+First, you need to add `ThStat.Covid19.Supervisor` to your application.
+
+```elixir
+children = [
+  ...,
+  ThStat.Covid19.Supervisor
+]
+
+Supervisor.start_link(children, strategy: your_strategy)
+```
+
+After that, use it!!
+
+```elixir
+iex> {:ok, %{body: cases}} = ThStat.Covid19.cases()
+iex> cases
+%{
+...
+}
+```
+
