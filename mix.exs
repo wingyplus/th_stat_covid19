@@ -23,7 +23,8 @@ defmodule ThStat.Covid19.MixProject do
     [
       {:tesla, "~> 1.4"},
       {:jason, "~> 1.2"},
-      {:finch, "~> 0.5"}
+      {:finch, "~> 0.8"},
+      {:timex, "~> 3.7"},
     ]
   end
 end
