@@ -1,11 +1,10 @@
 # ThStat.Covid19
 
-HTTP client for covid19.th-stat.com open api.
+HTTP client for covid19.th-stat.com open api plus some extras:
 
-## NOTE
-
-This library provides raw data. It doesn't cleanup or convert anything
-from source. The user of this library must cleanup manually.
+* Change field name to conform Elixir convention (snake case).
+* Convert date time to `Date.t()` or `DateTime.t()`. You don't need to worry about
+  date time string inconsistent.
 
 ## Installation
 
@@ -33,8 +32,8 @@ Supervisor.start_link(children, strategy: your_strategy)
 After that, use it!!
 
 ```elixir
-iex> {:ok, %{body: cases}} = ThStat.Covid19.cases()
-iex> cases
+iex> {:ok, %{data: timeline}} = ThStat.Covid19.get_timeline()
+iex> timeline
 %{
 ...
 }
